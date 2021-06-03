@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="ASCII"?>
+<!--
+  #====================
+  # Version
+  #  == compatible to: DOI_IAD2_label_creation_2020514.py
+  #                       - added: <xls_reserve_filepath>
+  #                       - added: <DOI_reserve_template>
+  #                       - added: orphaned_DOI_xls
+  #                       - moddified values for <activity_type>
+  #
+  # <options numOptions="x"> == x must match the number of attributes in <options></options>
+  #                          == where x not inclusive of: <fixed_attributes></fixed_attributes>
+  #===========================================================
+  #
+  #   sys_path               = path to python utility files
+  #   common_module          = filename of the common module that contains the "util" python functions
+  #   xmlUtil_module         = filename of the xmlUtil module that contains an XML library of methods
+  #   
+  #   root_path              = path to the starting directory of the product XML files to be examined                        
+  #   xls_reserve_filepath   = path & filename of the XLS file to reserve DOIs
+  #
+  #   publisher              = publishing Node
+  #
+  #   activity_type          = Reserve | RegisterPDS3 | RegisterPDS4
+  #   global_keyword_values  = keyword values not encountered in Product label; separated by semi-colon (e.g., test1; test2)
+  #                             - can be empty; values preceed values encountered in Product labels; duplicates omitted 
+  #
+  #   DOI_template           = name of the DOI XML template file
+  #   DOI_reserve_template   = name of the reserve DOI XML template file
+  #
+  #   OSTI_submitted_records = CSV of records already submitted to OSTI/IAD; validates product LIDVID not previously submitted
+  #
+  #   <fixed_attributes numOptions="x"> == rarely modified attributes 
+  #                                     == where x must match the number of attributes in <fixed_attributes></fixed_attributes>
+  #
+  #     P_member_status      = P - used in the collection inventory file                                                     
+  #     S_member_status      = S - used in the collection inventory file                                                     
+  #     pds_uri              = uri of the master_schema - used to locate all XML elements                                    
+  #     source_fileExt       = extension of the product XML files to be processed / examined
+  #     copy_to_root         = (True|False) to copy / overwrite Bundle & Collection files located in root_path
+  #     write_DEBUG          = (True|False) used to write lots of DEBUG info to the DEBUG file ("aaajunk.out")
+  #===========================================================
+-->   
+<options numOptions="13">
+  <sys_path>E:\\Python_2.7.14\\aaaProjects\\Util_pyFiles</sys_path>
+  <common_module>PY_common_20200415</common_module>
+  <xmlUtil_module>xmlUtils_20191104</xmlUtil_module>
+
+	<!--
+  <root_path>D:\WINWORD\Data_Prep_HandBook\aaaVer_9_20130225\DOI_20150505\aaDOI_production_submitted_labels\PPI_Cassini_PDS3_User_Guides_20210126\aaaSubmitted_by_PPI_active_20210407\aaaSubmitted_by_PPI_active_20210407\aaaTest_Document_ODL</root_path>  
+  -->
+  <root_path>D:\WINWORD\Data_Prep_HandBook\aaaVer_9_20130225\DOI_20150505\aaDOI_production_submitted_labels\PPI_Mess_EP_20210525\aaaSubmitted_by_PPI_active_20210526</root_path>  
+  <xls_reserve_filepath>D:\WINWORD\Data_Prep_HandBook\aaaVer_9_20130225\DOI_20150505\aaDOI_production_submitted_labels\PPI_MESS_raw_engineering_20210527\aaaSubmitted_by_PPI_reserve_20210527\DOI_reserve_MESS_ENG.xlsx</xls_reserve_filepath>  
+    
+  <!--
+     - List of publishing Nodes 
+  <publisher>PDS Geosciences (GEO) Node</publisher>
+  <publisher>Atmospheres Node</publisher>
+  <publisher>Ring-Moon Systems Node</publisher>
+  <publisher>Geosciences Node</publisher>
+   
+  -->
+  <publisher>Planetary Plasma Interactions Node</publisher>
+    
+  <activity_type>Reserve</activity_type>
+  <global_keyword_values>PDS; PDS4; PPI; Messenger</global_keyword_values>
+
+  <DOI_register_template>aaaDOI_templateFiles\DOI_IAD2_register_template_20200713.xml</DOI_register_template> 
+  <DOI_reserve_template>aaaDOI_templateFiles\DOI_IAD2_reserve_template_20200727.xml</DOI_reserve_template> 
+  
+  <!--
+     edited XML file to remove:
+        - urn:nasa:pds:maven.lpw::1.1
+        - urn:nasa:pds:maven.static.c:data.c2_32e32m::2.0
+   -->
+  <OSTI_submitted_records>OSTI_IAD_submitted_records\OSTI_IAD_submitted_records_full_20210527.xml</OSTI_submitted_records>
+  <orphaned_DOI_xls_filepath>E:\Python_2.7.14\aaaProjects\DOI_LIDVID_is_Registered_20171120\aaaOrphaned_DOI_XLS\orphaned_DOI_20200526.xls</orphaned_DOI_xls_filepath>
+  	
+	<fixed_attributes numOptions="6">
+	  <P_member_status>P</P_member_status>
+  	<S_member_status>S</S_member_status>
+	  <pds_uri>http://pds.nasa.gov/pds4/pds/v1</pds_uri>
+  	<source_fileExt>.xml</source_fileExt>
+  	<copy_to_root>False</copy_to_root>
+	  <write_DEBUG>True</write_DEBUG>
+	</fixed_attributes>  
+</options>

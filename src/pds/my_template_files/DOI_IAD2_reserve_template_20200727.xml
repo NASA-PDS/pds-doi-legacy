@@ -1,0 +1,32 @@
+    
+    <record status="Reserved"> 
+      	<!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+      	<id></id>
+    	
+        <title>Unpublished Data Set #001</title> 
+        <authors> 
+            <author> 
+               <first_name>Guy</first_name> 
+               <last_name>Sample</last_name> 
+            </author> 
+        </authors> 
+        <contributors>        
+            <contributor>
+                <full_name></full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>        
+        <publication_date>2018-12-15</publication_date> 
+        <product_type>Dataset</product_type> 
+        <product_type_specific>Dataset</product_type_specific>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value></identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>        
+    </record> 
+
+

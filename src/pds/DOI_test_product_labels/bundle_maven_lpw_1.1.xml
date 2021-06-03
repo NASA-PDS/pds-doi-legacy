@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1400.sch" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Bundle 
+    xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://pds.nasa.gov/pds4/pds/v1
+    http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1400.xsd
+    ">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:maven.lpw</logical_identifier>
+        <version_id>1.1</version_id>
+        <title>MAVEN LPW Bundle</title>
+        <information_model_version>1.4.0.0</information_model_version>
+        <product_class>Product_Bundle</product_class>
+        <Citation_Information>
+            <author_list>Laila Andersson</author_list>
+            <publication_year>2015</publication_year>
+            <description>
+               This bundle contains products associates with the PDS MAVEN LPW data archive. 
+            </description>
+        </Citation_Information>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2017-02-14</modification_date>
+                <version_id>1.1</version_id>
+                <description>
+                    Revised version of the MAVEN LPW Archive SIS.
+                </description>
+            </Modification_Detail>
+            <Modification_Detail>
+                <modification_date>2015-07-14</modification_date>
+                <version_id>1.0</version_id>
+                <description>Initial Release</description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <Context_Area>
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Langmuir Probe and Waves Instrument</name>
+                 <type>Instrument</type>   
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:instrument:lpw.maven</lid_reference>
+                <reference_type>is_instrument</reference_type>
+            </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+    </Context_Area>
+    <Reference_List>
+
+    </Reference_List>
+    <Bundle>
+        <bundle_type>Archive</bundle_type>
+        <description>
+           This bundle contains products associates with the PDS MAVEN LPW data archive.
+        </description>
+    </Bundle>
+    <File_Area_Text>
+        <File>
+            <file_name>Readme_1.1.txt</file_name>
+            <creation_date_time>2017-02-14T21:29:31</creation_date_time>
+            <file_size unit="byte">2358</file_size>
+            <md5_checksum>04faec5911352490de207e050c587f8c</md5_checksum>
+            <comment>This file contains a brief overview of the MAVEN LPW Bundle</comment>
+        </File>
+        <Stream_Text>
+            <name>Readme_1.1.txt</name>
+            <local_identifier>Readme</local_identifier>
+            <offset unit="byte">0</offset>
+            <object_length unit="byte">2358</object_length>
+            <parsing_standard_id>7-Bit ASCII Text</parsing_standard_id>
+            <description>This file contains a brief overview of the MAVEN LPW bundle.</description>
+            <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+        </Stream_Text>
+    </File_Area_Text>
+    <Bundle_Member_Entry>
+        <lidvid_reference>urn:nasa:pds:maven.lpw:document::1.1</lidvid_reference>
+        <member_status>Primary</member_status>
+        <reference_type>bundle_has_document_collection</reference_type>
+    </Bundle_Member_Entry>
+</Product_Bundle>
